@@ -13,5 +13,6 @@ class ProjectTask(models.Model):
     @api.multi
     def message_subscribe(self, partner_ids=None, channel_ids=None, subtype_ids=None):
         res = super(ProjectTask, self).message_subscribe(partner_ids, channel_ids, subtype_ids)
-        self.project_id.message_subscribe(partner_ids=self.message_partner_ids.ids, subtype_ids=[1])
+        for r in self:
+            r.project_id.message_subscribe(partner_ids=r.message_partner_ids.ids, subtype_ids=[1])
         return res
