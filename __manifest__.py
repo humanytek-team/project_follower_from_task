@@ -19,14 +19,13 @@
 ##############################################################################
 
 {
-    'name': 'Project Follower from task',
-    'version': '1.0',
-    'author': 'Humanytek',
-    'website': 'http://humanytek.com',
-    'depends': [
-        'project',
-        'mail',
+    "name": "Project Follower from task",
+    "version": "1.0",
+    "author": "Humanytek",
+    "website": "http://humanytek.com",
+    "depends": [
+        "project",
+        "mail",
     ],
-    'data': [
-    ]
+    "data": [],
 }
