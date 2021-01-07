@@ -20,13 +20,10 @@ class ProjectTask(models.Model):
                     [
                         ("res_model", "=", r.project_id._name),
                         ("res_id", "=", r.project_id.id),
-                        "|",
-                        ("partner_id", "in", partner_ids or []),
-                        ("channel_id", "in", channel_ids or []),
                     ]
                 )
             )
-            partners_to_suscribe = r.message_partner_ids - current_followers
+            partners_to_suscribe = r.message_partner_ids - current_followers.mapped("partner_id")
             if partners_to_suscribe:
                 r.project_id.message_subscribe(
                     partner_ids=partners_to_suscribe.ids, subtype_ids=[1]
