@@ -19,7 +19,7 @@ class ProjectTask(models.Model):
                 .search(
                     [
                         ("res_model", "=", r.project_id._name),
-                        ("res_id", "in", r.project_id.id),
+                        ("res_id", "=", r.project_id.id),
                         "|",
                         ("partner_id", "in", partner_ids or []),
                         ("channel_id", "in", channel_ids or []),
