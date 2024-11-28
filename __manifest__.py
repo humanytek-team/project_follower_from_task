@@ -28,4 +28,6 @@
         "mail",
     ],
     "data": [],
+    "installable": True,
+    "application": False,
 }
