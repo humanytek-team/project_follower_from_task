@@ -20,7 +20,7 @@
 
 {
     "name": "Project Follower from task",
-    "version": "1.0",
+    "version": "17.0.1.0.0",
     "author": "Humanytek",
     "website": "http://humanytek.com",
     "depends": [
