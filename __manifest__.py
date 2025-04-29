@@ -28,4 +28,5 @@
         "mail",
     ],
     "data": [],
+    "license": "AGPL-3",
 }

@@ -4,7 +4,7 @@ from odoo import _, api, fields, models
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
         task = super(ProjectTask, self).create(vals)
         task.sudo().message_follower_ids.unlink()
